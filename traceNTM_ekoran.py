@@ -163,6 +163,9 @@ def turing_machine_BFS(TM, input, limit):
         print(f'String rejected in 1 step')
     else:
         print(f'String rejected in {len(tree)} steps')
+    
+    branches = sum([len(level) for level in tree])
+    print(f'Degree of Nondeterminism: {branches / len(tree)}')
     return tree
 
 
